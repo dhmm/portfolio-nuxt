@@ -5,6 +5,9 @@
                 <NuxtLink to="/" class="menu-item">Home</NuxtLink>
             </li>
             <li>
+                <NuxtLink to="/projects" class="menu-item">Projects</NuxtLink>
+            </li>
+            <li>
                 <NuxtLink to="/about" class="menu-item">About</NuxtLink>
             </li>
         </ul>
