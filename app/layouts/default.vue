@@ -1,10 +1,15 @@
 <template>
     <div class="container mx-auto max-w-2xl">
         <header class="flex justify-between items-center mt-5">
-            <div class="text-xl font-semibold p-2 hover:bg-gray-200">
-                <NuxtLink to="/">Moutlou</NuxtLink>
+            <div class="flex items-center space-x-12">
+                <div class="text-xl font-semibold p-2 hover:bg-gray-200">
+                    <NuxtLink to="/">Moutlou</NuxtLink>
+                </div>
+                <Menu />
             </div>
-            <Menu />
+            <ClientOnly>
+                <ColorModeSelector />
+            </ClientOnly>
         </header>
         <main class="p-2 mt-10">
             <slot />
@@ -13,8 +18,6 @@
 </template>
 
 <script setup>
-const colorMode = useColorMode();
-colorMode.preference = 'light';
 
 useHead({
     titleTemplate: ' Moutlou\'s Portfolio | %s',
@@ -33,10 +36,11 @@ useHead({
 </script>
 
 <style>
-body{
+body {
     font-family: 'Roboto';
 }
-body{
+
+body {
     @apply bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300
 }
 </style>
