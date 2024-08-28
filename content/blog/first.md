@@ -1,3 +1,11 @@
+---
+title: 'Title of the page'
+description: 'meta description of the page'
+og:description: 'meta description of the page'
+---
+
+<!-- Content of the page -->
+
 # First post on our website
 ## Introduction 
 This is some text. *This is italic*.
